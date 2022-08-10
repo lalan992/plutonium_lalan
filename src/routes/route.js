@@ -4,6 +4,33 @@ const underscore = require('underscore')
 
 const router = express.Router();
 
+router.get("/sol1", function (req, res) {
+    //logic : sum of numbers is n(n+1)/2..so get sum of all numbers in array. now take sum of numbers till last digit in the array
+    ///LOGIC WILL GO HERE 
+    let arr= [1,2,3,5,6,7]
+    let missingNumber,sumOfarr,n;
+    n=arr[arr.length-1]
+    sumOfarr=arr.reduce((a,b)=>a+b)
+    missingNumber=(n*(n+1)/2)-sumOfarr;
+
+    res.send(  { data: missingNumber  }  );
+});
+
+router.get("/sol2", function (req, res) {
+    //logic : sum of n consecutive numbers is [ n * (first + last) / 2  ]..so get sum of all numbers in array. now take sum of n consecutive numbers.. n would be length+1 as 1 number is missing
+    ///LOGIC WILL GO HERE 
+
+    let arr= [33, 34, 35, 37, 38]
+    let missingNumber,sumOfarr,n;
+    n=arr.length+1
+    sumOfarr=arr.reduce((a,b)=>a+b);
+    missingNumber=(n*(arr[0]+arr[arr.length-1])/2)-sumOfarr;
+
+    res.send(  { data: missingNumber  }  );
+});
+
+
+
 router.get('/test-me', function (req, res) {
     myHelper.printDate()
     myHelper.getCurrentMonth()
@@ -105,3 +132,4 @@ router.get("/films/:filmId", function(req, res){
 
 module.exports = router;
 // adding this comment for no reason
+
