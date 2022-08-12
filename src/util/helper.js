@@ -1,19 +1,66 @@
-const printDate = function() {
-    let currentDate = new Date()
-    console.log(currentDate)    
-}
+player=[
+  {
+  "name": "manish",
+  "dob": "1/1/1995",
+  "gender": "male",
+  "city": "jalandhar",
+  "sports": [
+      "swimming"
+    ]
+  },
+  {
+      "name": "gopal",
+      "dob": "1/09/1995",
+      "gender": "male",
+      "city": "delhi",
+      "sports": [
+          "soccer"
+      ]
+  },
+  {
+      "name": "lokesh",
+      "dob": "1/1/1990",
+      "gender": "male",
+      "city": "mumbai",
+      "sports": [
+          "soccer"
+      ]
+  }
 
-const printMonth = function() {
-    let currentdate = new Date()
-    let currentMonth = currentdate.getMonth() + 1
-    console.log('The current month is '+currentMonth)
-}
+  ];
 
-const getBatchInfo = function() {
-  let batchInformation = 'Radon, W3D4, the topic for today is Nodejs module system assignment discussion'
-  console.log(batchInformation)
-}
-
-module.exports.printDate = printDate
-module.exports.getCurrentMonth = printMonth
-module.exports.getCohortData = getBatchInfo
+bookings=[{
+    "bookingNumber": 1,
+    "sportId": "",
+    "centerId": "",
+    "type": "private",
+    "slot": 16286598000000,
+    "bookedOn": "31/08/2021",
+    "bookedFor": "01/09/2021"
+   }
+   ];
+voters=[
+    {
+        "name":"rohan",
+        "age":15,
+        "votingStatus":false
+    },
+    {
+        "name":"Nadeem",
+        "age":25,
+        "votingStatus":true
+    },
+    {
+        "name":"Abhay",
+        "age":45,
+        "votingStatus":true
+    },
+    {
+        "name":"Shyam",
+        "age":55,
+        "votingStatus":true
+    }
+]
+module.exports.player=player;
+module.exports.bookings=bookings;
+module.exports.voters=voters;

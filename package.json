@@ -1,7 +1,7 @@
 {
-  "name": "radon",
+  "name": "Plutonium",
   "version": "1.0.0",
-  "description": "Backend cohort for Radon(May-Sep)",
+  "description": "Backend cohort for Plutonium(july-nov 2022)", 
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
