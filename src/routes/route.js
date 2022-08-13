@@ -40,10 +40,10 @@ router.post('/players/:playerName/bookings/:bookingId', function (req, res) {
     
 });
 
-router.post('/voters/:votingAge', function(req,res){
-    const newVotingAge=req.params.votingAge;
-    voters=voters.map((x)=>{if(x.age>=newVotingAge)x.votingStatus=true; else x.votingStatus=false; return x});
-    res.send({data:voters});
+router.post('/voters', function(req,res){
+    const newVotingAge=req.query.votingAge;
+    let myvoters=voters.filter((x)=>x.age>=newVotingAge? x.votingStatus=true: x.votingStatus=false);
+    res.send({data:myvoters});
 });
 
 router.get('/test-me', function (req, res) {
